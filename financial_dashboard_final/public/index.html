@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Financeiro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Financeiro</div>
+        <nav>
+            <ul>
+                <li><a href="#rparreira" class="selected">R.Parreira</a></li>
+                <li><a href="#rafaeva">Rafa e Eva</a></li>
+                <li><a href="#rpunipessoal">RP Unipessoal Lda</a></li>
+            </ul>
+        </nav>
+        <div class="filters">
+            <button>Último Mês</button>
+            <button>Últimos 3 Meses</button>
+            <button>Ano Atual</button>
+        </div>
+    </header>
+    <main>
+        <section id="rparreira" class="dashboard">
+            <h1>R.Parreira - Controle Financeiro</h1>
+            <div class="financial-summary">
+                <div class="financial-box">
+                    <h2>Receitas</h2>
+                    <p>€2000</p>
+                </div>
+                <div class="financial-box">
+                    <h2>Despesas</h2>
+                    <p>€1500</p>
+                </div>
+                <div class="financial-box">
+                    <h2>Poupança</h2>
+                    <p>€500</p>
+                </div>
+                <div class="financial-box">
+                    <h2>Saldo Final</h2>
+                    <p>€1000</p>
+                </div>
+            </div>
+            <div class="add-transaction">
+                <button id="addTransactionBtn">Adicionar Transação</button>
+            </div>
+            <div id="transaction-form" style="display: none;">
+                <form>
+                    <label for="descricao">Descrição</label>
+                    <input type="text" id="descricao" name="descricao">
+                    <label for="valor">Valor</label>
+                    <input type="number" id="valor" name="valor">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria" name="categoria">
+                        <option value="alimentacao">Alimentação</option>
+                        <option value="lazer">Lazer</option>
+                        <option value="saude">Saúde</option>
+                    </select>
+                    <label for="data">Data</label>
+                    <input type="date" id="data" name="data">
+                    <button type="submit">Adicionar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>
